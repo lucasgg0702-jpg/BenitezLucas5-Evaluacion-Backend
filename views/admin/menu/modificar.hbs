@@ -1,0 +1,18 @@
+{{> breadcrumb}}
+<div class="login">
+    <div class="login-triangle"></div>
+    <h2 class="login-header">Modificar Categoría — {{local.nombre}}</h2>
+    <form action="/admin/locales/{{local.id}}/menu/modificar" method="post" class="login-container">
+        <input type="hidden" name="id" value="{{categoria.id}}">
+        <label>Título</label>
+        <p><input type="text" class="form-control" name="titulo" value="{{categoria.titulo}}"></p>
+        <label>Slug</label>
+        <p><input type="text" class="form-control" name="slug" value="{{categoria.slug}}"></p>
+        <label>Avisos</label>
+        <p><input type="text" class="form-control" name="avisos" value="{{categoria.avisos}}"></p>
+        <label>Orden</label>
+        <p><input type="number" class="form-control" name="orden" value="{{categoria.orden}}"></p>
+        <p><input type="submit" value="Modificar"></p>
+    </form>
+    {{#if error}}<p>{{message}}</p>{{/if}}
+</div>

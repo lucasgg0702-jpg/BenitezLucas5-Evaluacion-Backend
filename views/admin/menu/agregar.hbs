@@ -1,0 +1,13 @@
+{{> breadcrumb}}
+<div class="login">
+    <div class="login-triangle"></div>
+    <h2 class="login-header">Agregar Categoría — {{local.nombre}}</h2>
+    <form action="/admin/locales/{{local.id}}/menu/agregar" method="post" class="login-container">
+        <p><input type="text" class="form-control" placeholder="Título (ej: Hamburguesas)" name="titulo"></p>
+        <p><input type="text" class="form-control" placeholder="Slug (ej: hamburguesas)" name="slug"></p>
+        <p><input type="text" class="form-control" placeholder="Avisos (separados por |, opcional)" name="avisos"></p>
+        <p><input type="number" class="form-control" placeholder="Orden (opcional, default 0)" name="orden"></p>
+        <p><input type="submit" value="Guardar"></p>
+    </form>
+    {{#if error}}<p>{{message}}</p>{{/if}}
+</div>

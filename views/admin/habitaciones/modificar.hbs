@@ -1,0 +1,24 @@
+{{> breadcrumb}}
+<div class="login">
+    <div class="login-triangle"></div>
+    <h2 class="login-header">Modificar Habitación — {{hospedaje.nombre}}</h2>
+    <form action="/admin/hospedajes/{{hospedaje.id}}/habitaciones/modificar" method="post" enctype="multipart/form-data" class="login-container">
+        <input type="hidden" name="id" value="{{habitacion.id}}">
+        <label>Número/Nombre</label>
+        <p><input type="text" class="form-control" name="numero" value="{{habitacion.numero}}"></p>
+        <label>Capacidad</label>
+        <p><input type="number" class="form-control" name="capacidad" value="{{habitacion.capacidad}}"></p>
+        <label>Precio por noche</label>
+        <p><input type="number" step="0.01" class="form-control" name="precio" value="{{habitacion.precio}}"></p>
+        <label>Comodidades</label>
+        <p><textarea class="form-control" name="comodidades">{{habitacion.comodidades}}</textarea></p>
+        <label>Orden</label>
+        <p><input type="number" class="form-control" name="orden" value="{{habitacion.orden}}"></p>
+        <label>Imagen:</label>
+        <p><input type="file" name="imagen" id="imagen"></p>
+        <p><label>Eliminar imagen actual? <input type="checkbox" name="img_delete" value="1"></label></p>
+        <input type="hidden" name="img_original" value="{{habitacion.img_id}}">
+        <p><input type="submit" value="Modificar"></p>
+    </form>
+    {{#if error}}<p>{{message}}</p>{{/if}}
+</div>

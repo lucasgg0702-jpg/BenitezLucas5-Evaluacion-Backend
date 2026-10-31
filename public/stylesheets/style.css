@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+header {
+  background-color: #7b1d1d;
+  padding: 16px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  color: white;
+  font-size: 34px;
+  font-weight: 700;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+footer {
+  background-color: #eee;
+  clear: both;
+  color: #333;
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 30px;
+}
+
+footer p {
+  margin: auto;
+}
+
+.holder {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #7b1d1d;
+  font-weight: 600;
+}
+
+.breadcrumb {
+  max-width: 960px;
+  margin: 16px auto 0;
+  font-size: 13px;
+  color: #999;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 4px;
+}
+.breadcrumb a {
+  color: #7b1d1d;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-separador {
+  margin: 0 6px;
+  color: #ccc;
+}
+
+.breadcrumb-actual {
+  color: #666;
+}
+
+/** Login **/
+.login {
+  width: 400px;
+  margin: 16px auto;
+  font-size: 16px;
+}
+
+.login-header,
+.login p {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.login-triangle {
+  width: 0;
+  margin-right: auto;
+  margin-left: auto;
+  border: 12px solid transparent;
+  border-bottom-color: #7b1d1d;
+}
+
+.login-header {
+  background: #7b1d1d;
+  padding: 20px;
+  font-size: 1.4em;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.login-container {
+  background: #f7f0e6;
+  padding: 12px;
+}
+
+.login p {
+  padding: 12px;
+}
+
+.login input,
+.login textarea {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 16px;
+  outline: 0;
+  font-family: inherit;
+  font-size: 0.95em;
+}
+
+.login input[type="text"],
+.login input[type="number"],
+.login input[type="password"],
+.login textarea {
+  background: #fff;
+  border-color: #c9b896;
+  color: #333;
+}
+
+.login input[type="text"]:focus,
+.login input[type="number"]:focus,
+.login input[type="password"]:focus,
+.login textarea:focus {
+  border-color: #c9952a;
+}
+
+.login input[type="submit"] {
+  background: #7b1d1d;
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.login input[type="submit"]:hover {
+  background: #9c2626;
+}
+
+.login input[type="submit"]:focus {
+  border-color: #c9952a;
+}
+
+/** Listados y formularios en general (Bootstrap override) **/
+.container {
+  display: block;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+input[type="checkbox"] {
+  width: 10%;
+}
+
+.table-dark {
+  --bs-table-bg: #7b1d1d;
+}
+
+.btn-success {
+  background-color: #c9952a;
+  border-color: #c9952a;
+}
+
+.btn-success:hover {
+  background-color: #a97b20;
+  border-color: #a97b20;
+}

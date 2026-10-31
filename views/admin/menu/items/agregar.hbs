@@ -1,0 +1,14 @@
+{{> breadcrumb}}
+<div class="login">
+    <div class="login-triangle"></div>
+    <h2 class="login-header">Agregar Ítem — {{categoria.titulo}}</h2>
+    <form action="/admin/locales/{{local.id}}/menu/{{categoria.id}}/items/agregar" method="post" enctype="multipart/form-data" class="login-container">
+        <p><input type="text" class="form-control" placeholder="Nombre" name="nombre"></p>
+        <p><textarea class="form-control" placeholder="Descripción" name="descripcion"></textarea></p>
+        <p><input type="number" step="0.01" class="form-control" placeholder="Precio" name="precio"></p>
+        <p><input type="number" class="form-control" placeholder="Orden (opcional)" name="orden"></p>
+        <p><label>Imagen: <input type="file" name="imagen" id="imagen"></label></p>
+        <p><input type="submit" value="Guardar"></p>
+    </form>
+    {{#if error}}<p>{{message}}</p>{{/if}}
+</div>

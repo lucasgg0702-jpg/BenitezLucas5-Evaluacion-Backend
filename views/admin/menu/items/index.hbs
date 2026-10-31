@@ -1,0 +1,43 @@
+{{> breadcrumb}}
+<div class="container">
+    <div class="row">
+        <p class="text-end">Hola {{persona}}! <a class="btn btn-danger" href="/admin/login/logout">Cerrar Sesión <i class="fa fa-sign-out-alt"></i></a></p>
+    </div>
+    <div class="row">
+        <div class="col-7">
+            <h3>Ítems — {{categoria.titulo}} ({{local.nombre}})</h3>
+        </div>
+        <div class="col-5 text-end">
+            <a class="btn btn-success" href="/admin/locales/{{local.id}}/menu/{{categoria.id}}/items/agregar"><i class="fa fa-plus" aria-hidden="true"></i>Nuevo ítem</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead>
+                    <tr class="table-dark">
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Imagen</th>
+                        <th class="text-end">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each items}}
+                    <tr>
+                        <th scope="row">{{id}}</th>
+                        <td>{{nombre}}</td>
+                        <td>${{precio}}</td>
+                        <td>{{{imagen}}}</td>
+                        <td class="text-end">
+                            <a class="btn btn-secondary" href="/admin/locales/{{../local.id}}/menu/{{../categoria.id}}/items/modificar/{{id}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                            <a class="btn btn-secondary" href="/admin/locales/{{../local.id}}/menu/{{../categoria.id}}/items/eliminar/{{id}}"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

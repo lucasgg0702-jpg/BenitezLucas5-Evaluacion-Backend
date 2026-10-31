@@ -1,0 +1,10 @@
+<nav class="breadcrumb">
+  {{#each migas}}
+    {{#if url}}
+      <a href="{{url}}">{{label}}</a>
+    {{else}}
+      <span class="breadcrumb-actual">{{label}}</span>
+    {{/if}}
+    {{#unless @last}}<span class="breadcrumb-separador">›</span>{{/unless}}
+  {{/each}}
+</nav>

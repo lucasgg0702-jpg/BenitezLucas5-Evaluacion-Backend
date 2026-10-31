@@ -1,0 +1,23 @@
+{{> breadcrumb}}
+<div class="login">
+    <div class="login-triangle"></div>
+
+    <h2 class="login-header">Agregar Local</h2>
+
+    <form action="/admin/locales/agregar" method="post" enctype="multipart/form-data" class="login-container">
+        <p><input type="text" class="form-control" placeholder="Nombre" name="nombre"></p>
+        <p><input type="text" class="form-control" placeholder="Slug (ej: good-food)" name="slug"></p>
+        <p><textarea class="form-control" placeholder="Descripción" name="descripcion"></textarea></p>
+        <p><input type="text" class="form-control" placeholder="Dirección" name="direccion"></p>
+        <p><input type="text" class="form-control" placeholder="Teléfono" name="telefono"></p>
+        <p><input type="text" class="form-control" placeholder="Horario" name="horario"></p>
+        <p><input type="text" class="form-control" placeholder="Tags (separados por coma)" name="tags"></p>
+        <p><input type="text" class="form-control" placeholder="Link de Google Maps" name="mapa_url"></p>
+        <p><input type="number" step="0.01" class="form-control" placeholder="Precio delivery (vacío = sin delivery)" name="delivery_precio"></p>
+        <p><label for="">Imagen: <input type="file" name="imagen" id="imagen"></label></p>
+        <p><input type="submit" value="Guardar"></p>
+    </form>
+    {{#if error}}
+    <p>{{message}}</p>
+    {{/if}}
+</div>

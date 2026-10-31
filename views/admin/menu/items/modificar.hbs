@@ -1,0 +1,22 @@
+{{> breadcrumb}}
+<div class="login">
+    <div class="login-triangle"></div>
+    <h2 class="login-header">Modificar Ítem — {{categoria.titulo}}</h2>
+    <form action="/admin/locales/{{local.id}}/menu/{{categoria.id}}/items/modificar" method="post" enctype="multipart/form-data" class="login-container">
+        <input type="hidden" name="id" value="{{item.id}}">
+        <label>Nombre</label>
+        <p><input type="text" class="form-control" name="nombre" value="{{item.nombre}}"></p>
+        <label>Descripción</label>
+        <p><textarea class="form-control" name="descripcion">{{item.descripcion}}</textarea></p>
+        <label>Precio</label>
+        <p><input type="number" step="0.01" class="form-control" name="precio" value="{{item.precio}}"></p>
+        <label>Orden</label>
+        <p><input type="number" class="form-control" name="orden" value="{{item.orden}}"></p>
+        <label>Imagen:</label>
+        <p><input type="file" name="imagen" id="imagen"></p>
+        <p><label>Eliminar imagen actual? <input type="checkbox" name="img_delete" value="1"></label></p>
+        <input type="hidden" name="img_original" value="{{item.img_id}}">
+        <p><input type="submit" value="Modificar"></p>
+    </form>
+    {{#if error}}<p>{{message}}</p>{{/if}}
+</div>

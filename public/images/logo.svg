@@ -1,0 +1,20 @@
+<svg width="400" height="400" viewBox="190 45 300 300" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>Emblema gastronómico Alvear</title>
+  <desc>Ícono de emblema circular clásico con tenedor y cuchillo en oro y borgoña para guía gastronómica de Alvear, Corrientes</desc>
+  <circle cx="340" cy="195" r="142" fill="none" stroke="#7B1D1D" stroke-width="3"/>
+  <circle cx="340" cy="195" r="134" fill="none" stroke="#C9952A" stroke-width="1.2"/>
+  <circle cx="340" cy="195" r="130" fill="none" stroke="#C9952A" stroke-width="0.5"/>
+  <polygon points="340,53 345,60 340,67 335,60" fill="#C9952A"/>
+  <polygon points="340,323 345,330 340,337 335,330" fill="#C9952A"/>
+  <circle cx="204" cy="195" r="4.5" fill="#C9952A"/>
+  <circle cx="476" cy="195" r="4.5" fill="#C9952A"/>
+  <rect x="309" y="123" width="3" height="50" rx="1.5" fill="#C9952A"/>
+  <rect x="315" y="123" width="3" height="50" rx="1.5" fill="#C9952A"/>
+  <rect x="321" y="123" width="3" height="50" rx="1.5" fill="#C9952A"/>
+  <rect x="309" y="170" width="15" height="6" rx="1" fill="#C9952A"/>
+  <rect x="314" y="174" width="7" height="92" rx="3.5" fill="#C9952A"/>
+  <rect x="358" y="123" width="8" height="53" rx="2" fill="#C9952A"/>
+  <rect x="354" y="174" width="16" height="5" rx="2" fill="#C9952A"/>
+  <rect x="358" y="177" width="8" height="89" rx="4" fill="#C9952A"/>
+  <polygon points="340,189 346,195 340,201 334,195" fill="#C9952A"/>
+</svg>

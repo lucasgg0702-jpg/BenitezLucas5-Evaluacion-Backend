@@ -1,0 +1,59 @@
+{{> breadcrumb}}
+<div class="login">
+    <div class="login-triangle"></div>
+
+    <h2 class="login-header">Modificar Hospedaje</h2>
+
+    <form action="/admin/hospedajes/modificar" method="post" enctype="multipart/form-data" class="login-container">
+        <input type="hidden" value="{{hospedaje.id}}" name="id">
+
+        <label for="">Nombre</label>
+        <p><input type="text" class="form-control" name="nombre" value="{{hospedaje.nombre}}"></p>
+
+        <label for="">Slug</label>
+        <p><input type="text" class="form-control" name="slug" value="{{hospedaje.slug}}"></p>
+
+        <label for="">Descripción</label>
+        <p><textarea class="form-control" name="descripcion">{{hospedaje.descripcion}}</textarea></p>
+
+        <label for="">Tipo</label>
+        <p><input type="text" class="form-control" name="tipo" value="{{hospedaje.tipo}}"></p>
+
+        <label for="">Horario de ingreso</label>
+        <p><input type="text" class="form-control" name="horario_ingreso" value="{{hospedaje.horario_ingreso}}"></p>
+
+        <label for="">Dirección</label>
+        <p><input type="text" class="form-control" name="direccion" value="{{hospedaje.direccion}}"></p>
+
+        <label for="">Teléfono</label>
+        <p><input type="text" class="form-control" name="telefono" value="{{hospedaje.telefono}}"></p>
+
+        <label for="">Capacidad máxima</label>
+        <p><input type="number" class="form-control" name="capacidad_max" value="{{hospedaje.capacidad_max}}"></p>
+
+        <label for="">Precio base</label>
+        <p><input type="number" step="0.01" class="form-control" name="precio_base" value="{{hospedaje.precio_base}}"></p>
+
+        <label for="">Tags</label>
+        <p><input type="text" class="form-control" name="tags" value="{{hospedaje.tags}}"></p>
+
+        <label for="">Link de Google Maps</label>
+        <p><input type="text" class="form-control" name="mapa_url" value="{{hospedaje.mapa_url}}"></p>
+
+        <label>Imagen:</label>
+        <p><input type="file" name="imagen" id="imagen"></p>
+
+        <p><label>
+                Eliminar imagen actual?
+                <input type="checkbox" name="img_delete" id="img_delete" value="1">
+        </label></p>
+
+        <input type="hidden" name="img_original" value="{{hospedaje.img_id}}">
+
+        <p><input type="submit" value="Modificar"></p>
+    </form>
+
+    {{#if error}}
+    <p>{{message}}</p>
+    {{/if}}
+</div>
